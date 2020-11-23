@@ -1,15 +1,20 @@
 {
-    "name": "Getting Started Example",
+    "name": "Zoom Blocker",
     "version": "1.1",
-    "description": "Build an Extension!",
+    "description": "Blocks distracting websites while zoom is open",
     "manifest_version": 2,
     "permissions": [
         "webNavigation",
-        "tabs"
+        "tabs",
+        "declarativeContent",
+        "storage"
     ],
     "background": {
         "scripts": [
             "blockNavigation.js"
         ]
-    }
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+      }
 }
